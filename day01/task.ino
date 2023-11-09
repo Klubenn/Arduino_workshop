@@ -72,11 +72,11 @@ void loop() {
     // lcd.print(voltage);
 
 
-
     Serial.println("Enter the voltage");
     while (Serial.available() == 0)
         ;
 
     voltage_input = Serial.readString();
+    lcd.clear();
     lcd.print(voltage_input);
 }
